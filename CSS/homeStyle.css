@@ -1,136 +1,154 @@
 :root{
-	--header-color: yellow;
-	--font-color: "#ffc152";
-	--bg-color: "#a3d3c3";
+	--header-color: rgba(0, 191, 255, 1);
+	--accent-color: rgba(0, 255, 161, 1); 
+	--bg-color: rgba(255, 255, 100, 1);
+	--bg-accent: rgba(255, 236, 33, 1) ;
+	--content-color: rgba(191, 223, 255, 1);
+	--content-accent: rgba(157, 191, 225, 1);
+	--font-color: rgba(255, 255, 57, 1);
+	--font-accent: rgba(0, 108, 255, 1);
 }
 
 body{
 	font-family: "Comic Sans MS";
-}
-
-#content{
-	padding: 10px 20px;
-	border: 10px ridge Orange;
 	background-color: var(--bg-color);
-	background-image: url(../Assets/bg.jpg);
 }
 
-.container {
-	display: flex;
-	background-color: rgba(250,250,250,0.75);
-	flex-direction: row;
-	flex-wrap: wrap;
+@media all and (min-width: 300px){
+	
+	.wrapper{
+		width:80%vw;
+		margin: auto;
+		border: 8px ridge var(--bg-accent);
+		
+		display: grid;
+		grid-template-rows: 150px auto auto 20px;
+		grid-template-columns: auto auto;
+		grid-template-areas:
+			"head head"
+			"nav nav"
+			"main main"
+			"foot foot";
+	}
+	
 }
 
-.container img{
-	margin-top: 10px;
-	height: 200px;
-	flex: 0 1 20%;
+@media screen and (min-width: 600px){
+	
+	.wrapper{
+		width: 80%vw;
+		margin: auto;
+		border: 8px ridge var(--bg-accent);
+		
+		display: grid;
+		grid-template-rows: auto auto auto auto;
+		grid-template-columns: auto auto;
+		grid-template-areas:
+			"head head"
+			"nav nav"
+			"main main"
+			"foot foot";
+	}
+	
 }
 
-.container h1{
-	color: var(--header-color);
-	font-size: 3rem;
-	margin-top: 60px;
-	margin-left: 10px;
-	flex: 0 1 60%;
+header{
+	grid-area: head;
+	font-size: 4vw;
+	padding-left: 1vw;
+	font-family: "Slackey", "Comic Sans MS", "sans serif";
+	color: var(--font-color);
+	background-color: var(--header-color);
+	background-image: url(../Assets/bg.gif);
+	background-size:100vw;
 }
-.container h3{
-	font-size: 2rem;
-	color: #13c446;
-	background-color: pink;
-	border: 5px ridge orange;
-	padding: 10px;
+
+header h1, header h3 {
+	margin: 1vw;
+	text-shadow: 1vw 1vw 1vw blue;
+}
+
+nav{
+	grid-area: nav;
+	font-size: 2.5vw;
 	text-align: center;
-	margin-left: 20px;
-	flex: 0 1 20%;
-}
-
-a:link{
-	color: white;
-}
-
-a:visited{
-	color: white;
-}
-
-a:hover{
-	color: yellow;
-}
-
-
-a:active{
-	color: green;
+	font-family: "Slackey", "Comic Sans MS", "sans serif";
+	background-color: var(--accent-color);
 }
 
 nav ul{
 	display: flex;
+	flex-direction: row;
 	justify-content: space-evenly;
+	padding: 0px;
+	margin: 0px;
+}
+
+nav ul li{
+	flex: 0 1 20%;
+	padding-top:1vw;
 	list-style-type: none;
-	padding: 10px;
+	background-color:var(--accent-color);
 }
 
-nav li {
-	flex: 0 1 22%;
-	font-size: 30px;
-	background-color: blue;
-	padding: 10px;
-	text-align: center;
-	border: 5px ridge Orange;
-}
-
-nav li a {
+nav ul li a {
+	display: block;
 	text-decoration: none;
-	background-color: blue;
+	padding: 1vw;
+}
+
+@keyframes scaleUp{
+	from{ transform: scale(1,1);
+		box-shadow: 0px 0px var(--header-color);
+		}
+	to { transform: scale(1.05, 1.05);
+		box-shadow: 0vw 0.5vw 0.5vw var(--header-color);
+	}
+}
+
+nav ul li:hover{
+	animation-name: scaleUp;
+	animation-duration: 1s;
+	transform: scale(1.05,1.05);
+	box-shadow: 0vw 0.5vw 0.5vw var(--header-color);
+}
+nav ul li:active{
+	background-color:var(--header-color);
+}
+
+nav ul li a:visited{
+	color: var(--header-color);
 }
 
 main{
+	grid-area: main;
 	display: flex;
-	flex-direction: row;
-	background-color: rgba(255,255,255,0.75);
+	background-color: white;
 }
 
-#page{ 
+.content{
 	flex: 0 1 80%;
-	padding: 20px;
-	background-color: #ffff78;
-	margin: 20px;
+	background-color:var(--content-color);
+	padding: 1vw;
+	margin: 1.5vw;
+	font-size: 3vw;
+	
 }
 
-.post{
-	display: grid;
-	justify-content: start;
-	margin: 20px 20px;
-	background-color: rgba(255,255,205);
-	grid-template-columns: 250px auto;
-	grid-template-rows: 50px 150px;
+.cont{
+	max-width: 30vw;
 }
 
-.post img{
-	grid-area: 1/1/3/2;
-	padding: 30px;
-}
-
-.post h3{
-	font-size: 25px;
-	padding-left: 10px;
-	grid-area: 1/2/2/3;
-}
-
-.post p{
-	font-size: 20px;
-	padding-left: 10px;
-	grid-area: 2/2/3/3;
-}
-
-#banner{
+.banner{
 	flex: 0 1 20%;
-	margin: 20px;
-	background-color: #ffff78;
+	background-color: var(--content-accent);
+	font-size: 1vw;
+	padding: 1vw;
 }
 
-#banner div{
-	margin: 20px;
-	background-color: rgba(255,255,205);
-	padding: 10px 20px;
+footer{
+	grid-area: foot;
+	text-align: center;
+	font-size: 1.75vw;
+	background-color: var(--header-color);
 }

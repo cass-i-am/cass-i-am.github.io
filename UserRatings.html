@@ -2,55 +2,66 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>User Ratings</title>
+        <title>RATINGS</title>
 		<link rel="stylesheet" type="text/css" href="CSS\UsRaStyle.css">
+		<link rel="icon" type="image/x-icon" href="Assets/favicon.png">
+		<link href="https://fonts.googleapis.com/css2?family=Slackey&display=swap" rel="stylesheet">
     </head>
     <body>
-		<div id="content">
+		<div class="wrapper">
 			<header>
-				<div class="container">
-					<img src="Assets\palms.gif" alt="SpongeBob SquarePants logo">
-					<h1>The Intertidal Zone</h1>
-					<h3>User Ratings</h3>
-				</div>
-				<nav>
-					<ul>
-						<li><a href="Home.html">About</a></li>
-						<li><a href="UserRatings.html">User Ratings</a></li>
-						<li><a href="Forums.html">Forums</a></li>
-						<li><a href="FanCreations.html">Fan Creations</a></li>
-					</ul>
-				</nav>
+				<h1>The Intertidal Zone</h1>
+				<h3>Ratings</h3>
 			</header>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="Impact.html">Impact</a></li>
+					<li><a href="ForumsMain.html">Forums</a></li>
+					<li><a href="FanCreations.html">Fan Creations</a></li>
+					<li><a href="PersonalConnection.html">Personal Connection</a></li>
+				</ul>
+			</nav>
 			<main>
-				<div id ="page">
-					<section>
-						<h3>Leave a review for an episode!</h3>
-						<form>
-							
+				<div class="content">
+					<section class = "container1">
+						<form action="#">
+							<h3>Share your thoughts!</h3>
+							<label for="season">Favorite Spongebob season:
+							<select name="season" id="season" required>
+								<option value="season1">Season 1</option>
+								<option value="season2">Season 2</option>
+								<option value="season3">Season 3</option>
+								<option value="season4">Season 4</option>
+								<option value="season5">Season 5</option>
+								<option value="season6">Season 6</option>
+								<option value="season7">Season 7</option>
+								<option value="season8">Season 8</option>
+								<option value="season9">Season 9</option>
+								<option value="season10">Season 10</option>
+								<option value="season11">Season 11</option>
+								<option value="season12">Season 12</option>
+								<option value="season13">Season 13</option>
+								<option value="season14">Season 14</option>
+							</select>
+							<img src="Assets/BubbleQ.png" class="icon" alt="more info icon">
+							<button type="submit">
+								<strong>Submit</strong>
+							</button>
 						</form>
 					</section>
 				</div>
-				<div id="banner">
+				<div class="banner">
 					<div>
-						<h3>News</h3>
-						<ul>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
-					</div>
-					<div>
-						<h3>Quick Links</h3>
-						<ul>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-							<li><a href=""></a></li>
-						</ul>
+						
 					</div>
 				</div>
 			</main>
 			<footer>
+				<cite>
+				This website is non-profit and for educational purposes; SpongeBob 
+				SquarePants is property of Nickelodeon/Viacom
+				</cite>
 			</footer>
 		</div>
 	</body>
