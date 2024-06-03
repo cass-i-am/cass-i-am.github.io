@@ -72,15 +72,9 @@ main{
 	background-color: var(--content-color);
 }
 
-.icon{
-	max-width: 20px;
-	float: right;
-}
-
 .banner{
 	flex: 0 1 30%;
 	background-color: var(--content-color);
-	padding-left: 10px;
 }
 
 footer{

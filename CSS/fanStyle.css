@@ -14,12 +14,16 @@ body{
 	background-color: var(--bg-color);
 }
 
-.wrapper{
-	width: 80%;
+@media max-width(800px){
+	.wrapper {
+	width: 350px;
 	margin: auto;
 	border: 8px ridge var(--bg-accent);
 	background-color: white;
+	}
 }
+
+
 
 header{
 	display: inline-block;
