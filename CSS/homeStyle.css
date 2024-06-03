@@ -59,6 +59,8 @@ header{
 	font-family: "Slackey", "Comic Sans MS", "sans serif";
 	color: var(--font-color);
 	background-color: var(--header-color);
+	background-image: url(../Assets/bg.gif);
+	background-size:100vw;
 }
 
 header h1, header h3 {
@@ -114,6 +116,9 @@ nav ul li:active{
 	background-color:var(--header-color);
 }
 
+nav ul li a:visited{
+	color: var(--header-color);
+}
 
 main{
 	grid-area: main;
@@ -125,6 +130,13 @@ main{
 	flex: 0 1 80%;
 	background-color:var(--content-color);
 	padding: 1vw;
+	margin: 1.5vw;
+	font-size: 3vw;
+	
+}
+
+.cont{
+	max-width: 30vw;
 }
 
 .banner{
